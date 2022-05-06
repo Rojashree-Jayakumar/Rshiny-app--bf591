@@ -170,7 +170,7 @@ ui <- fluidPage(
                     
                     tabPanel(
                         "PCA", label = "PCA",
-                        p("Click on 'Plot' button to view heatmap based on filtering"),
+                        p("Click on 'Plot' button to view PCA plot and choose your principal components"),
                         sidebarPanel(
                             actionButton("PCA_button", label = "Plot", width = "230px",
                                          style="color: #fff; background-color: #337ab7; border-color: #2e6da4",
@@ -186,7 +186,7 @@ ui <- fluidPage(
                         ),
                         
                         mainPanel(
-                            h5("Principal component analysis of the filtered normalised counts"),
+                            h5("Principal component analysis of the normalised counts"),
                             plotOutput("PCA1")
                         )
                     )
@@ -531,7 +531,7 @@ server <- function(input, output) {
         plotting<-as.matrix(log(x))
         plotting[plotting == -Inf] <- 0
         return (heatmap.2(plotting, xlab='Patient Samples', ylab='Genes', 
-                          main='Gene Expression Across Samples',trace='none', density.info = 'none',
+                          main='Clustered heatmap of normalised counts',trace='none', density.info = 'none',
                           key.xlab='Expression Level', scale='row', margins=c(5,5), cexRow = 0.5, cexCol = 0.2, key = 'TRUE'))
     }
     
