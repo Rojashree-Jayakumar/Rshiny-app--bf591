@@ -5,4 +5,4 @@
 
 ### app.R - code for the Rshiny app
 ### Preprocessing.R - code for processing the raw count files. Output from this script are stored in the Project directory of this repo
-### Project - directory where the files to be uploaded in the app
+### Project - directory where the files to be uploaded in the app are stored
