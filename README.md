@@ -4,5 +4,5 @@
 ## Final project BF591- Rojashree Jayakumar
 
 ### app.R - code for the Rshiny app
-### Preprocessing.R - code for processing the files to csv format
-### Project - directory where the files to be uploaded in the app are stored
+### Preprocessing.R - code for processing the raw count files. Output from this script are stored in the Project directory of this repo
+### Project - directory where the files to be uploaded in the app
